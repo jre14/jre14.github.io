@@ -6,49 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        #body { background: #673AB7; }
+        #nav { background: #4527A0; }
+        #tRanking { background: white}
+    </style>
     <title>Quiz</title>
 </head>
-<body class="container bg-info bg-opacity-80 text-white text-center mt-3">
-    <nav class="d-flex justify-content-between text-white">
+
+<body class="text-center text-white" id="body">
+    <nav class="m-0 p-2 d-flex justify-content-between text-white" id="nav">
         <div class="col-4"><a href="index.html" class="btn btn-primary "><i class="bi bi-arrow-left"></i> Regresar </a></div>
         <div class="col-4"><h1>¿Quiz?</h1></div>
-        <div class="col-4"><h3>0:00</h3></div>
+        <div class="col-4 h1" id="chronometer">00:00</div>
     </nav>
-    
-    <h1 id="welcome"></h1>
-    <div class="container col-10" id="form">
-            <h2>Ingresa nombre o apodo:</h2>
-            <input type="text" class="form-control" id="name">
-            <button class="m-2 btn btn-light" id="start">Comenzar</button>
+    <div class="col-10 m-auto" id="divWelcome">
+        <h1 class="mt-2" id="welcome"></h1>
+        <hr> 
+    </div>
+    <div class="container col-10 mt-4" id="form">
+        <h2>Ingresa nombre o apodo:</h2>
+        <input type="text" class="form-control" id="name">
+        <button class="m-2 btn btn-light" id="start">Comenzar</button>
     </div>
 
-    <div id="category">  
+    <div class="col-10 m-auto " id="category">  
         <button class="btn btn-light" id="generalCulture">Cultura General</button> 
         <button class="btn btn-light" id="futbol">Futbol</button>
     </div>
 
-    <div class="" id="qGC">
+    <div class="col-10 m-auto" id="qGC">
         <h2 id="question"></h2>
-        <button class="btn btn-light" id="option1"></button>
-        <button class="btn btn-light" id="option2"></button>
-        <button class="btn btn-light" id="option3"></button>
-        <button class="btn btn-light" id="option4"></button>
-        <button class="btn btn-light" id="option5"></button>
-        
+        <div class="m-1">
+            <button class="btn btn-light mb-1" id="option1"></button>
+            <button class="btn btn-light mb-1" id="option2"></button>
+            <button class="btn btn-light mb-1" id="option3"></button>
+            <button class="btn btn-light mb-1" id="option4"></button>
+            <button class="btn btn-light mb-1" id="option5"></button>
+        </div>
     </div>
-    <div id="results">
-        <table class="container" id="tRanking">
-            <tr>
+    <div class="col-11 m-auto"id="results">
+        <table class="container table table-striped table-hover" id="tRanking">
+            <tr class="table-success">
                 <th>Ranking</th>
-                <th>Nombre del jugador</th>
+                <th>Jugador</th>
                 <th>Aciertos</th>
+                <th>Tiempo</th>
             </tr>
         </table>
     </div>
-    <div>
+    <div class="col-11 m-auto">
         <h1 class="m-1"id="message"></h1>
     </div>
-    <div class="d-flex justify-content-end">
+    <div class="col-10 d-flex justify-content-end">
         <button class=" btn btn-light" id="next">Siguiente</button>
     </div>
     <div class="d-flex justify-content-center">

@@ -10,26 +10,26 @@ const arrayQuestionFutbol = [["¿Cuánto dura un partido de futbol", "45 minutos
                             ["¿En que temporada las victorias empezaron a valer 3 puntos?", "1995/96", "1993/94", "1989/90", "1997/98", "1991/92", "1995/96"],
                             ["¿A partir de que temporada se implantó el VAR?", "2000/01", "2014/15", "2018/19", "2008/09", "2012/13", "2018/19"]];
 
-const arrayPeople = [["Rodrigo", 19],[ "Pepe",10],["Rafa",12],["Tanque", 17]];
+const arrayPeople = [["Rodrigo", 9, "02:30"],[ "Pepe", 10, "01:45"],["Rafa", 5, "01:54"],["Tanque", 7, "01:25"]];
 
 let newArray = [];
-function pushArray(){
-    arrayPeople.push([nameUser, score]);
+const pushArray = () => {
+    arrayPeople.push([nameUser, score, userTime]);
     pushNewArray();
 }
 
-function pushNewArray(){
+const pushNewArray = () => {
     const countPeople = arrayPeople.length;
     let stopl = 0;
-    let n=20;
+    let n=10;
     for(l=n; l > 0; l--){
         for(y=0; y < countPeople; y++){  
-            for(x=0; x<2; x++){
+            for(x=0; x<3; x++){
                 if(l == arrayPeople[y][1]){               
                     if(arrayPeople[y][1] == arrayPeople[y][x]){
-                        stopl = 20 - arrayPeople[y][x];
+                        stopl = 10 - arrayPeople[y][x];
                         n = n - stopl;
-                        newArray.push([arrayPeople[y][0],arrayPeople[y][1]]);
+                        newArray.push([arrayPeople[y][0], arrayPeople[y][1], arrayPeople[y][2]]);
                     }
                 } 
             }
@@ -46,7 +46,7 @@ let btnOption5 = "";
 
 let saveOption = "";
 
-function correctAnswer(){
+let correctAnswer = () => {
     if(saveOption == arrayQuestion[i][6]){
         message.textContent = "Correcto";
             bgGreenMessage(message);
@@ -61,7 +61,7 @@ let array = "";
 let countArray = ""
 let category = ""
 
-function countOption() {
+const countOption = () => {
     switch (array){
         case arrayQuestionGeneralCulture:
             countArray = (arrayQuestionGeneralCulture.length-1);
@@ -87,14 +87,8 @@ const divQGC = document.getElementById("qGC");
 const btnNext = document.getElementById("next");
 const btnResults = document.getElementById("btnresults");
 const divResults = document.getElementById("results");
-
-divCategory.style.display = "none";
-divQGC.style.display = "none";
-btnNext.style.display = "none";
-btnResults.style.display = "none";
-divResults.style.display = "none";
-
 const welcome = document.getElementById("welcome");
+const divWelcome = document.getElementById("divWelcome");
 const generalCulture = document.getElementById("generalCulture");
 const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2");
@@ -106,25 +100,34 @@ const question = document.getElementById("question");
 const message = document.getElementById("message");
 const start = document.getElementById("start");
 
-function user(datoUser) {
+divCategory.style.display = "none";
+divQGC.style.display = "none";
+btnNext.style.display = "none";
+btnResults.style.display = "none";
+divResults.style.display = "none";
+divWelcome.style.display = "none";
+
+
+
+const user = (datoUser) => {
     nameUser = datoUser;
 }
 
-function bgRedMessage(message){
+const bgRedMessage = (message) => {
     message.style.background = "red";
 }
 
-function bgGreenMessage(message){
+const bgGreenMessage = (message) => {
     message.style.background = "green";
 }
 
 let score = 0;
-function scorePlayer() {
+let scorePlayer = () => {
     score++;
 }
 
 let i = 0;
-function increment() {
+let increment = () => {
     if(i < countArray) {
         i++;
         nQuestion();
@@ -134,7 +137,7 @@ function increment() {
     }   
 }
 
-function results() {
+const results = () => {
     btnResults.style.display = "block";
     welcome.textContent = `${nameUser} ¡Felicidades has concluido ${category}!`;
     question.textContent = "";
@@ -147,11 +150,11 @@ function results() {
     //console.log("se acabo");
 }
 
-function displayBtnNext() {
+const displayBtnNext = () => {
     btnNext.style.display = "block";
 } 
 
-function disabledBtnOption() {
+const disabledBtnOption = () => {
     option1.disabled = true;
     option2.disabled = true;
     option3.disabled = true;
@@ -159,11 +162,11 @@ function disabledBtnOption() {
     option5.disabled = true;
 }
 
-function nQuestion() {
+let nQuestion = () => {
     question.textContent = arrayQuestion[i][0];
 }
 
-function nOption(){
+let nOption = () => {
     btnOption1 = arrayQuestion[i][1];
     btnOption2 = arrayQuestion[i][2];
     btnOption3 = arrayQuestion[i][3];
@@ -182,6 +185,7 @@ btnResults.onclick = () => {
     btnResults.style.display = "none";
     let tRanking = document.getElementById('tRanking');
     let body = document.createElement('tbody');
+    stopQuiz();
     pushArray();
     pushNewArray();
     let countNewArray = arrayPeople.length;
@@ -191,7 +195,7 @@ btnResults.onclick = () => {
         let td = document.createElement('td');
         td.innerText = k;
         tr.appendChild(td);
-        for(x=0; x<2; x++){
+        for(x=0; x<3; x++){
             td = document.createElement('td');              
             if(newArray[y][1] == newArray[y][x]){
                 td.innerText = newArray[y][x];
@@ -210,6 +214,7 @@ start.onclick = () => {
     } else {
         divForm.style.display = "none";
         divCategory.style.display = "block";
+        divWelcome.style.display = "block";
         user(datoUser);
         welcome.textContent = `Bienvenido ${nameUser}, comenzemos eligiendo una categoria`;
     }
@@ -223,6 +228,7 @@ generalCulture.onclick = () => {
     welcome.textContent = `${nameUser} has elegido: Cultura General`;  
     nQuestion();
     nOption();
+    startQuiz();
     
     option1.onclick = () => {
         saveOption = btnOption1;
@@ -268,6 +274,7 @@ futbol.onclick = () => {
     welcome.textContent = `${nameUser} has elegido: Futbol`;  
     nQuestion();
     nOption();
+    startQuiz();
     
     option1.onclick = () => {
         saveOption = btnOption1;
@@ -315,3 +322,30 @@ btnNext.onclick = () => {
     option4.disabled = false;
     option5.disabled = false;
 } 
+
+const chronometer = document.getElementById('chronometer');
+let runTime = 0;
+//console.log(Date.now())
+const startQuiz = () => {
+    let startTime = Date.now() - runTime;
+    chronometerInterval = setInterval( () => {
+        runTime = Date.now() - startTime;
+        chronometer.textContent = calculateTime(runTime);
+    }, 1000)
+}
+const calculateTime = runTime => {
+    const totalSeconds = Math.floor(runTime / 1000);
+    const totalMinutes = Math.floor(totalSeconds / 60);
+
+    const displaySeconds = (totalSeconds % 60).toString().padStart(2, "0");
+    const displayMinutes = totalMinutes.toString().padStart(2, "0");
+
+    return `${displayMinutes}:${displaySeconds}`
+}
+
+const stopQuiz = () => {
+    userTime = calculateTime(runTime);
+    runTime = 0;
+    clearInterval(chronometerInterval);
+    chronometer.textContent = '00:00';
+}
