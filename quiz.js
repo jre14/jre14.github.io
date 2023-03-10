@@ -22,7 +22,7 @@ const pushNewArray = () => {
     const countPeople = arrayPeople.length;
     let stopl = 0;
     let n=10;
-    for(l=n; l > 0; l--){
+    for(l=n; l >= 0; l--){
         for(y=0; y < countPeople; y++){  
             for(x=0; x<3; x++){
                 if(l == arrayPeople[y][1]){               
@@ -43,11 +43,10 @@ let btnOption2 = "";
 let btnOption3 = "";
 let btnOption4 = "";
 let btnOption5 = "";
-
 let saveOption = "";
 
 let correctAnswer = () => {
-    if(saveOption == arrayQuestion[i][6]){
+    if(saveOption == arrayQuestion[j][6]){
         message.textContent = "Correcto";
             bgGreenMessage(message);
             scorePlayer(); 
@@ -60,13 +59,26 @@ let correctAnswer = () => {
 let array = "";
 let countArray = ""
 let category = ""
+let usedNum = [];
+let position = [];
 
 const countOption = () => {
+    while(usedNum.length < 5){
+        let randomNum = Math.ceil(Math.random() * 5);
+        if(!usedNum.includes(randomNum)){
+            usedNum.push(randomNum);
+        }
+    }
+    for(k=0; k < usedNum.length; k++){
+        position.push(usedNum[k]-1)
+    }
+
     switch (array){
         case arrayQuestionGeneralCulture:
             countArray = (arrayQuestionGeneralCulture.length-1);
             arrayQuestion = arrayQuestionGeneralCulture;
             category = "Cultura General";
+            
             nQuestion();
             nOption();
         break;
@@ -78,7 +90,6 @@ const countOption = () => {
             nQuestion();
             nOption();
         break;
-
     }
 }
 const divForm = document.getElementById("form");
@@ -107,10 +118,9 @@ btnResults.style.display = "none";
 divResults.style.display = "none";
 divWelcome.style.display = "none";
 
-
-
 const user = (datoUser) => {
     nameUser = datoUser;
+    return nameUser;
 }
 
 const bgRedMessage = (message) => {
@@ -163,21 +173,24 @@ const disabledBtnOption = () => {
 }
 
 let nQuestion = () => {
-    question.textContent = arrayQuestion[i][0];
+    //console.log(usedNum[0]);
+    j = position[i];
+    //console.log(j)
+    question.textContent = arrayQuestion[j][0];
 }
 
 let nOption = () => {
-    btnOption1 = arrayQuestion[i][1];
-    btnOption2 = arrayQuestion[i][2];
-    btnOption3 = arrayQuestion[i][3];
-    btnOption4 = arrayQuestion[i][4];
-    btnOption5 = arrayQuestion[i][5];
+    btnOption1 = arrayQuestion[j][1];
+    btnOption2 = arrayQuestion[j][2];
+    btnOption3 = arrayQuestion[j][3];
+    btnOption4 = arrayQuestion[j][4];
+    btnOption5 = arrayQuestion[j][5];
 
-    option1.textContent = arrayQuestion[i][1];
-    option2.textContent = arrayQuestion[i][2];
-    option3.textContent = arrayQuestion[i][3];
-    option4.textContent = arrayQuestion[i][4];
-    option5.textContent = arrayQuestion[i][5];
+    option1.textContent = arrayQuestion[j][1];
+    option2.textContent = arrayQuestion[j][2];
+    option3.textContent = arrayQuestion[j][3];
+    option4.textContent = arrayQuestion[j][4];
+    option5.textContent = arrayQuestion[j][5];
 }
 
 btnResults.onclick = () => {
