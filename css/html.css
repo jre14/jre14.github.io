@@ -47,9 +47,9 @@ body.dark nav i {
   }
 }
 
-@media (min-width: 380px) {
+@media (min-width: 320px) {
   #h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 
