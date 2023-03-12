@@ -6,32 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/html.css">
     <title>Portafolio</title>
 </head>
-<body class="container col-10 text-bg-dark mt-3">
-    <div class="about me">
-        <h1><i class="bi bi-code"></i> Sobre mi <i class="bi bi-code-slash"></i></h1>
-        <span>Soy un desarrollador web con el proposito de continuar con mi crecimiento profesional aplicando mis conocimientos asi como adquirir nuevos para alcanzar mis objetivos</span>
+<body class="container col-10 mt-3">
+    <nav class="d-flex justify-content-end">
+        <a href="" class="btn btn-black p-2 fs-2"><i class="bi bi-linkedin"></i></a>
+        <a href="" class="btn btn-black p-2 fs-2"> <i class="bi bi-github"> </i></a>
+        <div class="my-auto"><button class="switch m-auto" id="switch">
+            <span><i class="bi bi-brightness-high-fill"></i></span>
+            <span><i class="bi bi-moon-fill"></i></span>
+        </button></div>
+    </nav>
+    <div class="aboutme my-4">
+        <h1 class="text-center" id="h1"><i class="bi bi-code"></i> Sobre mi <i class="bi bi-code-slash"></i></h1>
+        <p style="text-align: justify;" class="text-wrap">Soy un desarrollador web con el proposito de continuar con mi crecimiento profesional aplicando mis conocimientos asi como adquirir nuevos para alcanzar mis objetivos,
+            me he desempeñado con varios equipos de trabajo involucrandome en varios proyectos con el fin de resolver los requerimientos de los clientes con el fin de adquirir experiencia y de ciertas
+            forma ser más productivo en casos similares en un futuro.
+        </p>
     </div>
-    <div class="proyects row justify-content-around mt-3">
-        <h1><i class="bi bi-code"></i> Proyectos <i class="bi bi-code-slash"></i></h1>
-        <div class="card text-dark mt-2" style="width: 18rem;">
+    <div class="tecnologies my-4">
+        <h1 class="text-center" id="h1"><i class="bi bi-gear-wide-connected"></i> Tecnologías </h1>
+        <div class="container row justify-content-around mt-2 text-center">
+            <div class="col-4 my-2"><img src="img/HTML5.png" width="40px"></img> HTML</div>
+            <div class="col-4 my-2"><img src="img/CSS3.png" width="30px"></img> CSS</div>
+            <div class="col-4 my-2"><img src="img/PHP.png" height="30px"></img> PHP</div>
+            <div class="col-4 my-2"><img src="img/Java.png" width="28px"></img> JAVA</div>
+            <div class="col-4 my-2"><img src="img/JavaScript.png" width="35px"> JavaScript</div>
+            <div class="col-4 my-2"><img src="img/Bootstrap.png" height="35px"></img> Bootstrap</div>
+            <div class="col-4 my-2"><img src="img/Android.png" width="35px"> Andorid</div>
+            <div class="col-4 my-2"><i class="bi bi-apple fs-2"></i> iOS</div>
+            <div class="col-4 my-2"><img src="img/MySQL.png" height="35px"> MySQL</div>
+        </div>
+    </div>
+    <div class="proyects row justify-content-around my-4">
+        <h1 class="text-center" id="h1"><i class="bi bi-code-square"></i> Proyectos </h1>
+        <div class="card text-dark my-2" style="width: 18rem;">
             <img src="img/ssCalculator.png" class="card-img-top mt-1" alt="SS Calculator">
             <div class="card-body">
                 <h5 class="card-title"><i class="bi bi-calculator-fill"></i> Calculadora</h5>
-                <p class="card-text">Calculadora con operaciones aritmeticas basicas, desarrollada con JavaScript</p>
+                <p style="text-align: justify;" class="card-text">Calculadora con operaciones aritmeticas basicas, desarrollada con JavaScript</p>
                 <a href="calculator.html" class="btn btn-primary"> <i class="bi bi-eye"></i> Ver proyecto</a>
             </div>
         </div>
-        <div class="card text-dark mt-2" style="width: 18rem;">
+        <div class="card text-dark my-2" style="width: 18rem;">
             <img src="img/ssQuiz.png" class="card-img-top mt-1" alt="SS Quiz">
             <div class="card-body">
                 <h5 class="card-title"><i class="bi bi-question-circle-fill"></i> ¿Quiz?</h5>
-                <p class="card-text">Desarrollada con JavaScript sobre diversos temas, tomando en cuenta el tiempo en que contestes 10 preguntas aleatoriamente y al concluir asignarte en un ranking</p>
+                <p style="text-align: justify;" class="card-text">Desarrollada con JavaScript sobre diversos temas, tomando en cuenta el tiempo en que contestes 10 preguntas aleatoriamente y al concluir asignarte en un ranking</p>
                 <a href="quiz.html" class="btn btn-primary"> <i class="bi bi-eye"></i> Ver proyecto</a>
             </div>
         </div>
-        <div class="card text-dark mt-2" style="width: 18rem;">
+        <div class="card text-dark my-2" style="width: 18rem;">
             <img src="" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><i class="bi bi-question-lg"></i> Proximamente</h5>
@@ -40,19 +66,9 @@
             </div>
         </div>
     </div>
-    <div class="tecnologies mt-3">
-        <h1><i class="bi bi-code"></i> Tecnologías <i class="bi bi-code-slash"></i></h1>
-        <div class="container row justify-content-around mt-2">
-            <div class="col-4"><img src="" alt="">HTML</div>
-            <div class="col-4"><img src="" alt="">CSS</div>
-            <div class="col-4"><img src="" alt="">PHP</div>
-            <div class="col-4"><img src="" alt="">JAVA</div>
-            <div class="col-4"><img src="" alt="">JavaScript</div>
-            <div class="col-4"><img src="" alt="">Bootstrap</div>
-            <div class="col-4"><img src="" alt="">Andorid</div>
-            <div class="col-4"><img src="" alt="">IOS</div>
-            <div class="col-4"><img src="" alt="">SQL</div>
-        </div>
-    </div>
+    <footer class=" mt-3 p-2 bg-primary d-flex justify-content-around">
+        <button class="btn btn-primary p-2 fs-1" id="top"><i class="bi bi-arrow-up-square-fill"></i></button>
+    </footer>
+    <script src="js/html.js"></script>
 </body>
 </html>
