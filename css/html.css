@@ -82,6 +82,7 @@ body.dark footer {
 }
 
 .switch {
+  width: 65px;
   background: #343D5B;
   border-radius: 1000px;
   border: none;
