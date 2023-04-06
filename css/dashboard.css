@@ -1,0 +1,11 @@
+.navbar {
+    background: #5A34C8;
+}
+
+.navbar div a {
+    color: azure;
+}
+
+.navbar button{
+    color:aliceblue;
+}

@@ -1,0 +1,97 @@
+body{
+    background: #424242;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    width: 170px;
+    height: 200px;
+    background-color: purple;
+}
+
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front i{
+    color: #f3f3f3;
+    margin: auto;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50%;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background:  #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip .card .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.flip .card .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+@media (max-width: 1280px) {
+    .card {
+        width: 160px;
+        height: 200px;
+    }
+}
+@media (max-width: 1024px) {
+    .card {
+        width: 140px;
+        height: 180px;
+    }
+}
+@media (max-width: 720px) {
+    .card {
+        width: 120px;
+        height: 145px;
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        width: 100px;
+        height: 140px;
+    }
+}
+@media (max-width: 320px) {
+    .card {
+        width: 80px;
+        height: 100px;
+    }
+}
+
+
+
+
+
+
+

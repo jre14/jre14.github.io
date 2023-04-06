@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        #body {background-color: black;}
+        #panel {font-size: large;}
+    </style>
+    <title>Calculadora</title>
+</head>
+
+<body class="mt-3 m-auto col-10" id="body">
+    <nav class="">
+        <div><a href="index.html" class="btn btn-primary "><i class="bi bi-arrow-left"></i> Regresar </a></div>
+    </nav>
+    <div class="content row d-flex justify-content-around text-center m-auto mt-5">
+        <h1 class="text-white">Calculadora</h1>
+        <input class="col-12 m-auto p-1" type="text" id="panel">
+        <div class="content-numbers text-center col-9 row justify-content-around mt-3 m-auto">
+            <button class="btn btn btn-danger mb-1" id="ac">AC</button>
+            <button class="col-4 btn btn-light p-1 mb-1" id="one">1</button>
+            <button class="col-4 btn btn-light p-2 mb-1" id="two">2</button>
+            <button class="col-4 btn btn-light p-2 mb-1" id="three">3</button>
+            <button class="col-4 btn btn-light p-2 mb-1" id="four">4</button>
+            <button class="col-4 btn btn-light p-2 mb-1" id="five">5</button>
+            <button class="col-4 btn btn-light p-2 mb-1" id="six">6</button>            
+            <button class="col-4 btn btn-light p-2 mb-1" id="seven">7</button>
+            <button class="col-4 btn btn-light p-2 mb-1" id="eight">8</button>
+            <button class="col-4 btn btn-light p-2 mb-1" id="nine">9</button>
+            <button class="col-4 btn btn-primary p-2 mb-1" id="dot">.</button>
+            <button class="col-4 btn btn-light p-2 mb-1" id="zero">0</button>               
+            <button class="col-4 btn btn-primary p-2 mb-1" id="equal">=</button>
+        </div>
+        <div class="content-operators text-center col-3 m-auto">
+            <button class="col-12 btn btn-warning p-2 mb-1" id="multiplication">*</button>
+            <button class="col-12 btn btn-warning p-2 mb-1" id="division">/</button>
+            <button class="col-12 btn btn-warning p-2 mb-1" id="plus">+</button>
+            <button class="col-12 btn btn-warning p-2 mb-1" id="minus">-</button>
+        </div>
+    </div>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

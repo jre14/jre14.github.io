@@ -1,0 +1,146 @@
+body {
+  background: #F1F1F1;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+}
+
+body.dark {
+  background: #212121;
+  color: #F1F1F1;
+}
+
+body.dark nav i {
+  color: #F1F1F1;
+}
+
+body.dark .card {
+  background-color: #424242;
+  color: #F1F1F1;
+}
+
+body.dark .card .btn {
+  background-color: #2196F3;
+  color: #212121;
+  border: #2196F3;
+}
+
+body.dark footer {
+  background-color: #2196F3;
+  color: black;
+}
+
+.head {
+  background-color: #310295;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.head p {
+  color: #F1F1F1;
+}
+
+.head .nav i{
+  color: #F1F1F1;
+}
+
+.h1 {
+  font-size: 90px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1497be), to(#1c2aec));
+  background: linear-gradient(#1497be, #1c2aec);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-animation: text 5s linear infinite;
+          animation: text 5s linear infinite;
+}
+
+@-webkit-keyframes text {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes text {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@media (min-width: 320px) {
+  .h1 {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 480px) {
+  .h1 {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 720px) {
+  .h1 {
+    font-size: 72px;
+  }
+}
+
+.switch {
+  width: 65px;
+  background: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background: orange;
+  color: #000;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: none;
+  color: #F1F1F1;
+}
+/*# sourceMappingURL=index.css.map */
