@@ -1,0 +1,51 @@
+body{
+    background: #BFEAF5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #82AAE3, #91D8E4, #BFEAF5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #82AAE3, #91D8E4, #BFEAF5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.container-image{
+    border-radius: 15px;
+    height: 275px;
+    width: 325px;
+    transition: all 500ms ease;
+}
+
+.container-image img{
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    object-fit: cover;
+    transition: all 500ms ease;
+    
+}
+
+.container-image:hover > img{
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px #000;
+}
+
+.container-image i {
+    position: relative;
+    font-size: 30px;
+    top: -50px;
+    left: 20px;
+    color: #EAFDFC;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.container-image:hover > i {
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 420px) {
+    .container-image{
+        height: 250px;
+        width: 300px;
+    }
+}

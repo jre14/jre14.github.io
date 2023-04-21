@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+*{
+    font-family: 'Secular One', sans-serif;
+}
+
+
+#body { 
+    background: #3D2C8D; 
+}
+
+#nav { 
+    background: #1C0C5B; 
+}
+
+#nav .btn {
+    color:#FDD6FF;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+#nav .btn:hover{
+    color: #1C0C5B;
+    background-color: #FDD6FF;
+}
+
+#nav .title, #chronometer{
+    color:#FDD6FF;
+    font-size: 20px;
+}
+
+#form {
+    color: #FDD6FF;
+}
+
+#form #name{ 
+    background-color: #FDD6FF;
+    border-radius: 25px;
+}
+
+#form .btn, #category .btn, #containerQuestions .btn, #next, #btnresults{ 
+    background-color: #FDD6FF;
+    border-radius: 25px;
+    padding: 10px;
+    color: #1C0C5B;
+}
+
+.divText .hr {
+    color: #FDD6FF;
+
+}
+
+#containerQuestions{
+    color: #FDD6FF;
+}
+
+#containerQuestions button{
+    border-radius: 25px;
+}
+
+#divText #contentText{
+    color: #FDD6FF;
+}
+#name { text-align:center; font-size:large;}
+#tRanking { 
+    border-radius: 15px;
+}
+
+#tRanking thead, tbody{
+    color: #FDD6FF;
+}

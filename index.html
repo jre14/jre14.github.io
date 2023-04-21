@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Portafolio</title>
+</head>
+<body>
+    <header>     
+        <nav class="navbar navbar-expand-lg" style="background-color: #256D85;">
+            <div class="container-fluid col-11">
+                <a class="navbar-brand animate__animated animate__fadeInLeft animate__delay-2s" href="#"><i class="fa-solid fa-laptop-code"></i> Desarrolador Web</a>
+                <button class="navbar-toggler animate__animated animate__fadeInRight animate__delay-2s" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars" style="color: #DFF6FF"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav d-flex justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link animate__animated animate__fadeInLeft animate__delay-2s" href="#portafolio" aria-current="page"><i class="fa-solid fa-code"></i> Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animate__animated animate__fadeInLeft animate__delay-2s" href="#skills"><i class="fa-solid fa-gears"></i> Skill Set</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link animate__animated animate__fadeInLeft animate__delay-2s" href="#experiencia"><i class="fa-solid fa-building-circle-check"></i> Experiencia</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="saludo py-5 d-flex align-content-between flex-wrap m-auto">
+            <section class="col-11 d-flex align-items-center flex-column m-auto my-5">
+                <div class="static-txt col-auto  animate__animated animate__fadeInLeft animate__delay-2s"> <i class="fa-solid fa-laptop-code"></i> Desarrollador</div>
+                <div class="upwards animate__animated animate__fadeInRight animate__delay-2s">
+                    <ul class="dynamic-txts">
+                        <li>Web <i class="fa-solid fa-globe"></i></li>
+                        <li>Front End <i class="fa-solid fa-computer"></i></li>
+                        <li>Back End <i class="fa-solid fa-code"></i></li>
+                    </ul>
+                </div>
+            </section>
+                
+            <section class="about-me align-items-center text-center m-auto my-5 col-11">
+                <h2 class="animate__animated animate__fadeInLeft animate__delay-2s"><i class="fa-solid fa-clock"></i> Pasatiempos</h2>
+                <hr class="animate__animated animate__fadeInRight animate__delay-2s">
+                <div class="hobbies d-flex justify-content-around mt-5">
+                    <div class="hobby d-flex align-items-center flex-column m-1">
+                        <i class="fa-solid fa-book-open-reader animate__animated animate__fadeInDown animate__delay-2s"></i> 
+                        <span class="animate__animated animate__fadeInUp mt-1 animate__delay-2s">Aprender</span> 
+                    </div>
+                    <div class="hobby d-flex align-items-center flex-column m-1">
+                        <i class="fa-brands fa-spotify animate__animated animate__fadeInDown animate__delay-2s"></i> 
+                        <span class="animate__animated animate__fadeInUp animate__delay-2s mt-1">Escuchar Música</span>
+                    </div>
+                    <div class="hobby d-flex align-items-center flex-column m-1">
+                        <i class="fa-brands fa-xbox animate__animated animate__fadeInDown animate__delay-2s"></i> 
+                        <span class="animate__animated animate__fadeInUp animate__delay-2s mt-1">Jugar Videojuegos</span>
+                    </div>
+                    <div class="hobby d-flex align-items-center flex-column m-1">
+                        <i class="fa-brands fa-discord animate__animated animate__fadeInDown animate__delay-2s"></i> 
+                        <span class="animate__animated animate__fadeInUp animate__delay-2s mt-1">Reuniones por discord</span>
+                    </div>
+                </div>
+            </section>
+    </section>
+
+    <section class="portafolio col-11 m-auto my-5 pt-3 text-center" id="portafolio">
+        <h1 class="my-3 animate__animated animate__fadeInDown animate__delay-2s"><i class="fa-solid fa-code"></i> Portafolio</h1>
+        <hr class="animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="my-5 projects d-flex flex-wrap justify-content-around">
+            <div class="proyect animate__animated animate__fadeInUp animate__delay-2s my-3">
+                <div class="container-proyect">
+                    <img src="img/ssGalery.png" alt="">
+                    <div class="textHover p-3">
+                        <h3>Galeria</h3>
+                        <p>Muestra tu galeria de fotos a tus amigos de una manera sorprendente.</p>
+                        <div class="section-button d-flex flex-wrap justify-content-around">
+                            <div class="tecnologies d-flex justify-content-around">
+                                <i class="fa-brands fa-html5"></i> 
+                                <i class="fa-brands fa-css3-alt"></i> 
+                                <i class="fa-brands fa-square-js"></i> 
+                                <i class="fa-brands fa-bootstrap"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="galery.html" class="btn"><i class="fa-solid fa-link"></i></a>
+                                <button class="btn"><i class="fa-brands fa-github"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyect animate__animated animate__fadeInUp animate__delay-2s my-3">
+                <div class="container-proyect">
+                    <img src="img/ssMemorama.png" alt="">
+                    <div class="textHover p-3">
+                        <h3>Memorama</h3>
+                        <p>Memorama que pondrá a prueba tu memoria para encontrar los pares correspondientes,
+                            ten en cuenta que solo podrás equivocarte 5 veces.</p>
+                        <div class="section-button d-flex flex-wrap justify-content-around">
+                            <div class="tecnologies d-flex justify-content-around">
+                                <i class="fa-brands fa-html5"></i> 
+                                <i class="fa-brands fa-css3-alt"></i> 
+                                <i class="fa-brands fa-square-js"></i> 
+                                <i class="fa-brands fa-bootstrap"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="memorama.html" class="btn"><i class="fa-solid fa-link"></i></a>
+                                <button class="btn"><i class="fa-brands fa-github"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="proyect animate__animated animate__fadeInUp animate__delay-2s my-3">
+                <div class="container-proyect">
+                    <img src="img/ssQuiz.png" alt="">
+                    <div class="textHover p-3">
+                        <h3>¿Quiz?</h3>
+                        <p>Quiz que pondra a prueba tu conocimiento en diversos temas con preguntas aleatorias, 
+                            al concluir asignarte en una clasificación.</p>
+                        <div class="section-button d-flex flex-wrap justify-content-around">
+                            <div class="tecnologies d-flex justify-content-around">
+                                <i class="fa-brands fa-html5"></i> 
+                                <i class="fa-brands fa-css3-alt"></i> 
+                                <i class="fa-brands fa-square-js"></i> 
+                                <i class="fa-brands fa-bootstrap"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="/quiz.html" class="btn"><i class="fa-solid fa-link"></i></a>
+                                <button class="btn"><i class="fa-brands fa-github"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="proyect animate__animated animate__fadeInUp animate__delay-2s my-3">
+                <div class="container-proyect">
+                    <img src="img/ssCalculator.png" alt="">
+                    <div class="textHover p-3">
+                        <h3>Calculadora</h3>
+                        <p>Calculadora que nos ayudará a realizar cálculos con operaciones aritmeticas basicas.</p>
+                        <div class="section-button d-flex flex-wrap justify-content-around">
+                            <div class="tecnologies m-1 d-flex justify-content-around">
+                                <i class="fa-brands fa-html5"></i> 
+                                <i class="fa-brands fa-css3-alt"></i> 
+                                <i class="fa-brands fa-square-js"></i> 
+                                <i class="fa-brands fa-bootstrap"></i>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="/calculator.html" class="btn"><i class="fa-solid fa-link"></i></a>
+                                <button class="btn"><i class="fa-brands fa-github"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+    <section class="skills col-11 m-auto my-5 pt-3 text-center" id="skills">
+        <h1 class="my-3"><i class="fa-solid fa-gears"></i> Skills Set</h1>
+        <hr>
+        <div class="d-flex flex-wrap justify-content-around m-auto my-5">
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-html5"></i>
+                    <h5 class="mt-2">HTML</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h5 class="mt-2">CSS</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-java"></i>
+                    <h5 class="mt-2">Java</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-solid fa-database"></i>
+                    <h5 class="mt-2">SQL</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <h5 class="mt-2">Git</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-github"></i>
+                    <h5 class="mt-2">GitHub</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-android"></i>
+                    <h5 class="mt-2">Android</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-apple"></i>
+                    <h5 class="mt-2">iOS</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-php"></i>
+                    <h5 class="mt-2">PHP</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-cpanel"></i>
+                    <h5 class="mt-2">cPanel</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-square-js"></i>
+                    <h5 class="mt-1">JavaScript</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <h5 class="mt-1">Bootstrap</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-node-js"></i>
+                    <h5 class="mt-2">Nodejs</h5>
+                </div>
+            </div>
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-vuejs"></i>
+                    <h5 class="mt-2">Vue.js</h5>
+                </div>
+            </div>
+            
+            <div class="box mx-1 my-3 d-flex align-items-center">
+                <div class="m-auto row">
+                    <i class="fa-brands fa-python"></i>
+                    <h5 class="mt-2">Python</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="col-11 m-auto my-5 pt-3 text-center" id="experiencia">
+        <h1><i class="fa-solid fa-building-circle-check my-3"></i> Experiencia</h1>
+            <hr>
+            <div class="cards mt-4 d-flex flex-wrap justify-content-around">
+                <div class="container-card my-4">
+                    <div class="card c1">
+                        <div class="img-empresa">
+                            <img src="img/imgTecmilenio.jpeg" alt="">
+                        </div>
+                        <div class="description-card py-1 px-3">
+                            <h5 class="text-center">Proyecto Escolar</h5>
+                            <p>Mediante un equipo de trabajo se desarrollo un software durante 5 meses, para importar un archivo de Excel, filtrar los datos y guardar los mismos 
+                                en una Base de Datos para posteriormente mostrarlos en una plantilla de forma mas amigable para el usuario.</p>
+                            <div class="tecnologies d-flex justify-content-around">
+                                <i class="fa-brands fa-html5"></i> 
+                                <i class="fa-brands fa-css3-alt"></i> 
+                                <i class="fa-brands fa-php"></i> 
+                                <i class="fa-brands fa-square-js"></i> 
+                                <i class="fa-solid fa-database"></i>
+                                <i class="fa-brands fa-cpanel"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-card my-4">
+                    <div class="card c2">
+                        <div class="img-empresa">
+                            <img src="img/ssAnevi.png" alt="">
+                        </div>
+                        <div class="description-card py-1 px-3">
+                            <h5 class="text-center">Semestre Empresarial</h5>
+                            <p>Realice una pasantia de 6 meses en un inicio realizaba pruebas unitarias a software ya realizados posteriormente me integre
+                                a un equipo de trabajo utilizando las herramientas necesarias para trabajar en los proyectos e involucrandome en varios 
+                                proyectos.</p>
+                            <div class=" d-flex justify-content-around">
+                                <div class="tecnologies d-flex justify-content-around">
+                                    <i class="fa-brands fa-html5"></i> 
+                                    <i class="fa-brands fa-css3-alt"></i> 
+                                    <i class="fa-brands fa-php"></i> 
+                                    <i class="fa-brands fa-square-js"></i> 
+                                    <i class="fa-solid fa-database"></i>
+                                    <i class="fa-brands fa-cpanel"></i>
+                                </div>
+                                <a class="btn m-auto" href="http://anevi.com/anevi2017/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer class="d-flex flex-wrap justify-content-around align-items-center py-3">
+        <div class="page-tecnologies d-flex justify-content-around">
+            <i class="fa-brands fa-html5"></i> 
+            <i class="fa-brands fa-css3-alt"></i> 
+            <i class="fa-brands fa-square-js"></i> 
+            <i class="fa-brands fa-bootstrap"></i>
+        </div>
+        <div class="version text-center m-2">
+            Portafolio v2.2
+        </div>
+        <div class="footer-links d-flex align-items-center m-2">
+            <a class="btn m-1" href="https://github.com/jre14/jre14.github.io" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/b7143ff94f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

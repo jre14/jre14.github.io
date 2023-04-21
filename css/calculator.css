@@ -1,0 +1,157 @@
+/* 
+#272932
+#1C7293
+#B9E3C6
+#F1F2EB
+*/
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+*{
+    font-family: 'Play', sans-serif;
+}
+body {
+    background-color: #272932;
+}
+
+.nav-btn a {
+    color: #F1F2EB;
+    background-color: #C73C12;
+    border-radius: 25px;
+}
+
+.nav-btn a:hover{
+    color:  #C73C12;
+    background-color: #F1F2EB;
+}
+
+.content {
+    width: 260px;
+}
+
+
+
+#ac{
+    background-color: #93A7FA;
+    border-radius: 25px;
+    height: 45px;
+    margin: 4px;
+}
+
+#num{
+    border-radius: 25px;
+    color: #F1F2EB;
+    width: 48px;
+    height: 45px;
+    background-color: #1C7293;
+    margin: 4px;
+}
+
+#dot, #equal{
+    border-radius: 25px;
+    font-size: 26px;
+    width: 48px;
+    height: 45px;
+    color:#272932;
+    background-color: #B9E3C6;
+    margin: 4px;
+    
+}
+
+#operator {
+    border-radius: 25px;
+    font-size: 26px;
+    width: 48px;
+    height: 45px;
+    color: #F1F2EB;
+    background-color: #5C3A99;
+    margin:4px;
+}
+
+
+@media (min-width: 380px) {
+
+    .content {
+        width: 320px;
+    }
+
+    #num{
+        width: 60px;
+        height: 45px;
+    }
+    
+    #dot, #equal{
+
+        width: 60px;
+        height: 45px;
+        
+    }
+    
+    #operator {
+        width: 60px;
+        height: 45px;
+    }
+}
+
+@media (min-width: 420px) {
+    .content {
+        width: 400px;
+    }
+    
+    #panel {
+        height: 40px;
+    }
+
+    #num{
+        width: 70px;
+        height: 45px;
+    }
+    
+    #dot, #equal{
+
+        width: 70px;
+        height: 45px;
+        
+    }
+    
+    #operator {
+        width: 70px;
+        height: 45px;
+    }
+}
+
+@media (min-width: 900px) {
+    #panel {
+        height: 45px;
+    }
+
+
+    .ac {
+        height: 50px;
+        margin: 8px;
+    }
+
+
+    .content {
+        width: 600px;
+    }
+
+    #num{
+        width: 120px;
+        height: 50px;
+        margin: 8px;
+        font-size: 20px;
+    }
+    
+    #dot, #equal{
+
+        width: 120px;
+        height: 50px;
+        font-size: 20px;
+        
+    }
+    
+    #operator {
+        width: 120px;
+        height: 50px;
+    }
+}
